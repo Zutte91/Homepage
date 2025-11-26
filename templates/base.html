@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}ez-IT{% endblock %}</title>
+    <title>{% block title %} - ez-IT{% endblock %}</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -22,27 +22,54 @@
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideInFromLeft {
+            from { opacity: 0; transform: translateX(-30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInFromRight {
+            from { opacity: 0; transform: translateX(30px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        .animation-delay-200 {
+            animation-delay: 0.2s;
+        }
+        .animation-delay-400 {
+            animation-delay: 0.4s;
+        }
+        .slide-in-left {
+            animation: slideInFromLeft 0.6s ease-out;
+        }
+        .slide-in-right {
+            animation: slideInFromRight 0.6s ease-out;
+        }
     </style>
 </head>
 <body class="bg-white text-gray-900">
     <!-- Header Navigation -->
-    <header class="bg-primary-blue text-white shadow-lg">
+    <header class="bg-primary-blue text-white shadow-lg sticky top-0 z-50 transition-all duration-300">
         <nav class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
-                <a href="/" class="text-2xl font-bold hover:text-blue-200 transition">IT Services</a>
-                <ul class="flex space-x-6">
-                    <li><a href="/" class="hover:text-blue-200 transition">Home</a></li>
-                    <li><a href="/about" class="hover:text-blue-200 transition">About</a></li>
-                    <li><a href="/projects" class="hover:text-blue-200 transition">Projects</a></li>
+                <a href="/" class="text-3xl font-bold hover:text-blue-200 transition transform hover:scale-110 duration-300">ez-IT</a>
+                <ul class="flex space-x-8">
+                    <li><a href="/" class="hover:text-blue-200 transition relative group">Home<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span></a></li>
+                    <li><a href="/about" class="hover:text-blue-200 transition relative group">About<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span></a></li>
+                    <li><a href="/projects" class="hover:text-blue-200 transition relative group">Projects<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span></a></li>
                     <li class="relative group">
-                        <a href="/services" class="hover:text-blue-200 transition">Services</a>
-                        <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-900 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10">
-                            <li><a href="/services/it-consulting" class="block px-4 py-2 hover:bg-blue-50 rounded-t-lg">IT Consulting</a></li>
-                            <li><a href="/services/training" class="block px-4 py-2 hover:bg-blue-50">Training</a></li>
-                            <li><a href="/services/trading" class="block px-4 py-2 hover:bg-blue-50">Trading</a></li>
-                            <li><a href="/services/network" class="block px-4 py-2 hover:bg-blue-50">Network</a></li>
-                            <li><a href="/services/homelab" class="block px-4 py-2 hover:bg-blue-50">Homelab</a></li>
-                            <li><a href="/services/software-development" class="block px-4 py-2 hover:bg-blue-50 rounded-b-lg">Software Development</a></li>
+                        <a href="/services" class="hover:text-blue-200 transition">Services<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span></a>
+                        <ul class="absolute left-0 mt-2 w-56 bg-white text-gray-900 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10 overflow-hidden">
+                            <li><a href="/services/it-consulting" class="block px-6 py-3 hover:bg-primary-blue hover:text-white transition">IT Consulting</a></li>
+                            <li><a href="/services/training" class="block px-6 py-3 hover:bg-primary-blue hover:text-white transition">Training</a></li>
+                            <li><a href="/services/trading" class="block px-6 py-3 hover:bg-primary-blue hover:text-white transition">Trading</a></li>
+                            <li><a href="/services/network" class="block px-6 py-3 hover:bg-primary-blue hover:text-white transition">Network</a></li>
+                            <li><a href="/services/homelab" class="block px-6 py-3 hover:bg-primary-blue hover:text-white transition">Homelab</a></li>
+                            <li><a href="/services/software-development" class="block px-6 py-3 hover:bg-primary-blue hover:text-white transition">Software Development</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -56,15 +83,15 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-primary-blue text-white mt-12">
-        <div class="container mx-auto px-4 py-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer class="bg-gradient-to-r from-primary-blue to-light-blue text-white mt-12 border-t-4 border-light-blue">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
                         <li><a href="/" class="hover:text-blue-200 transition">Home</a></li>
-                        <li><a href="/about" class="hover:text-blue-200 transition">About Me</a></li>
-                        <li><a href="/projects" class="hover:text-blue-200 transition">Projects Hub</a></li>
+                        <li><a href="/about" class="hover:text-blue-200 transition">About</a></li>
+                        <li><a href="/projects" class="hover:text-blue-200 transition">Projects</a></li>
                     </ul>
                 </div>
                 <div>
@@ -80,15 +107,26 @@
                     <ul class="space-y-2">
                         <li><a href="/services/network" class="hover:text-blue-200 transition">Network</a></li>
                         <li><a href="/services/homelab" class="hover:text-blue-200 transition">Homelab</a></li>
-                        <li><a href="/services/software-development" class="hover:text-blue-200 transition">Software Development</a></li>
+                        <li><a href="/services/software-development" class="hover:text-blue-200 transition">Software Dev</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Contact</h3>
-                    <p class="text-blue-200">Get in touch for your IT needs</p>
+                    <p class="text-blue-100">Get in touch for your IT needs</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2s9 5 20 5a9.5 9.5 0 00-9-5.5c4.75 2.25 7-7 7-7-2.25 1.5-5.5 1.5-7-1z"/></svg>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white bg-opacity-20 rounded-full flex items-center justify-center hover:bg-opacity-30 transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.722-2.004 1.418-.103.25-.129.599-.129.948v5.439h-3.541s.047-8.842 0-9.769h3.541v1.381c.43-.665 1.199-1.61 2.919-1.61 2.134 0 3.734 1.393 3.734 4.385v5.613zM5.337 8.855c-1.144 0-1.915-.758-1.915-1.708 0-.951.77-1.708 1.958-1.708 1.187 0 1.917.757 1.944 1.708 0 .95-.757 1.708-1.987 1.708zm1.582 11.597H3.635V9.683h3.284v10.769zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="border-t border-blue-600 mt-8 pt-4 text-center text-blue-200">
+            <div class="border-t border-white border-opacity-30 pt-8 text-center text-blue-100">
                 <p>&copy; 2024 IT Services. All rights reserved.</p>
             </div>
         </div>

@@ -4,98 +4,143 @@
 
 {% block content %}
 <!-- Hero Section -->
-<section class="bg-gradient-to-r from-primary-blue to-light-blue text-white py-20">
-    <div class="container mx-auto px-4 text-center">
-        <h1 class="text-5xl font-bold mb-6">Professional IT Services</h1>
-        <p class="text-xl mb-8 text-blue-100">Comprehensive IT solutions for your business needs</p>
-        <a href="/about" class="bg-white text-primary-blue px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition inline-block">Learn More</a>
+<section class="relative min-h-screen flex items-center overflow-hidden">
+    <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=80');"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-primary-blue to-light-blue opacity-80"></div>
+    <div class="relative z-10 container mx-auto px-4 text-center text-white">
+        <h1 class="text-6xl md:text-7xl font-bold mb-6 leading-tight">Professional IT Services</h1>
+        <p class="text-2xl md:text-3xl mb-10 text-blue-100">Innovative solutions for digital challenges</p>
+        <div class="space-x-4">
+            <a href="/about" class="bg-white text-primary-blue px-10 py-4 rounded-lg font-semibold hover:bg-blue-50 transition inline-block transform hover:scale-105 duration-300">Learn More</a>
+            <a href="/services" class="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-blue transition inline-block transform hover:scale-105 duration-300">Our Services</a>
+        </div>
     </div>
 </section>
 
 <!-- Services Overview -->
-<section class="py-16 bg-gray-50">
+<section class="py-24 bg-gradient-to-b from-white to-gray-100">
     <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-12 text-primary-blue">Our Services</h2>
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-bold text-primary-blue mb-4">Our Services</h2>
+            <div class="w-20 h-1 bg-light-blue mx-auto rounded-full"></div>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition border-l-4 border-primary-blue">
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary-blue group cursor-pointer">
+                <div class="w-16 h-16 bg-primary-blue rounded-lg flex items-center justify-center mb-6 group-hover:bg-light-blue transition">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
                 <h3 class="text-2xl font-bold mb-4 text-primary-blue">IT Consulting</h3>
-                <p class="text-gray-700 mb-4">Expert guidance to optimize your IT infrastructure and strategy.</p>
-                <a href="/services/it-consulting" class="text-light-blue hover:text-primary-blue font-semibold">Learn more →</a>
+                <p class="text-gray-700 mb-6 leading-relaxed">Expert guidance to optimize your IT infrastructure and strategy.</p>
+                <a href="/services/it-consulting" class="text-light-blue hover:text-primary-blue font-semibold inline-flex items-center group/link">Learn more <span class="ml-2 group-hover/link:translate-x-2 transition">→</span></a>
             </div>
             
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition border-l-4 border-primary-blue">
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary-blue group cursor-pointer">
+                <div class="w-16 h-16 bg-primary-blue rounded-lg flex items-center justify-center mb-6 group-hover:bg-light-blue transition">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17s4.5 10.747 10 10.747c5.5 0 10-4.998 10-10.747S17.5 6.253 12 6.253z"></path>
+                    </svg>
+                </div>
                 <h3 class="text-2xl font-bold mb-4 text-primary-blue">Training</h3>
-                <p class="text-gray-700 mb-4">Comprehensive IT training programs tailored to your team's needs.</p>
-                <a href="/services/training" class="text-light-blue hover:text-primary-blue font-semibold">Learn more →</a>
+                <p class="text-gray-700 mb-6 leading-relaxed">Comprehensive IT training programs tailored to your team's needs.</p>
+                <a href="/services/training" class="text-light-blue hover:text-primary-blue font-semibold inline-flex items-center group/link">Learn more <span class="ml-2 group-hover/link:translate-x-2 transition">→</span></a>
             </div>
             
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition border-l-4 border-primary-blue">
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary-blue group cursor-pointer">
+                <div class="w-16 h-16 bg-primary-blue rounded-lg flex items-center justify-center mb-6 group-hover:bg-light-blue transition">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
                 <h3 class="text-2xl font-bold mb-4 text-primary-blue">Trading</h3>
-                <p class="text-gray-700 mb-4">IT solutions and support for trading operations and systems.</p>
-                <a href="/services/trading" class="text-light-blue hover:text-primary-blue font-semibold">Learn more →</a>
+                <p class="text-gray-700 mb-6 leading-relaxed">IT solutions and support for trading operations and systems.</p>
+                <a href="/services/trading" class="text-light-blue hover:text-primary-blue font-semibold inline-flex items-center group/link">Learn more <span class="ml-2 group-hover/link:translate-x-2 transition">→</span></a>
             </div>
             
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition border-l-4 border-primary-blue">
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary-blue group cursor-pointer">
+                <div class="w-16 h-16 bg-primary-blue rounded-lg flex items-center justify-center mb-6 group-hover:bg-light-blue transition">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.933 13.074a8 8 0 0013.793-3.652M9.933 13.074l-2.606 8.405a8.001 8.001 0 0011.532-1.05M9.933 13.074l6.903-6.903M12 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    </svg>
+                </div>
                 <h3 class="text-2xl font-bold mb-4 text-primary-blue">Network</h3>
-                <p class="text-gray-700 mb-4">Design, implementation, and management of network infrastructure.</p>
-                <a href="/services/network" class="text-light-blue hover:text-primary-blue font-semibold">Learn more →</a>
+                <p class="text-gray-700 mb-6 leading-relaxed">Design, implementation, and management of network infrastructure.</p>
+                <a href="/services/network" class="text-light-blue hover:text-primary-blue font-semibold inline-flex items-center group/link">Learn more <span class="ml-2 group-hover/link:translate-x-2 transition">→</span></a>
             </div>
             
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition border-l-4 border-primary-blue">
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary-blue group cursor-pointer">
+                <div class="w-16 h-16 bg-primary-blue rounded-lg flex items-center justify-center mb-6 group-hover:bg-light-blue transition">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                    </svg>
+                </div>
                 <h3 class="text-2xl font-bold mb-4 text-primary-blue">Homelab</h3>
-                <p class="text-gray-700 mb-4">Custom homelab solutions and consulting for enthusiasts and professionals.</p>
-                <a href="/services/homelab" class="text-light-blue hover:text-primary-blue font-semibold">Learn more →</a>
+                <p class="text-gray-700 mb-6 leading-relaxed">Custom homelab solutions and consulting for enthusiasts and professionals.</p>
+                <a href="/services/homelab" class="text-light-blue hover:text-primary-blue font-semibold inline-flex items-center group/link">Learn more <span class="ml-2 group-hover/link:translate-x-2 transition">→</span></a>
             </div>
             
-            <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition border-l-4 border-primary-blue">
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary-blue group cursor-pointer">
+                <div class="w-16 h-16 bg-primary-blue rounded-lg flex items-center justify-center mb-6 group-hover:bg-light-blue transition">
+                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </div>
                 <h3 class="text-2xl font-bold mb-4 text-primary-blue">Software Development</h3>
-                <p class="text-gray-700 mb-4">Custom software solutions built to your specifications.</p>
-                <a href="/services/software-development" class="text-light-blue hover:text-primary-blue font-semibold">Learn more →</a>
+                <p class="text-gray-700 mb-6 leading-relaxed">Custom software solutions built to your specifications.</p>
+                <a href="/services/software-development" class="text-light-blue hover:text-primary-blue font-semibold inline-flex items-center group/link">Learn more <span class="ml-2 group-hover/link:translate-x-2 transition">→</span></a>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Contact Section -->
-<section class="py-16 bg-white">
+<section class="py-24 bg-gradient-to-r from-primary-blue to-light-blue text-white">
     <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-12 text-primary-blue">Get In Touch</h2>
-        <div class="max-w-2xl mx-auto bg-gray-50 p-8 rounded-lg shadow-lg">
-            <div class="space-y-4">
+        <h2 class="text-5xl font-bold text-center mb-4">Get In Touch</h2>
+        <p class="text-center text-blue-100 mb-16 text-lg">We'd love to hear from you</p>
+        <div class="max-w-4xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-xl hover:bg-opacity-20 transition transform hover:scale-105 duration-300">
                 <div class="flex items-center space-x-4">
-                    <div class="bg-primary-blue text-white p-3 rounded-full">
+                    <div class="bg-white bg-opacity-20 text-white p-3 rounded-full">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                         </svg>
                     </div>
                     <div>
-                        <h3 class="font-semibold text-gray-900">Email</h3>
-                        <p class="text-gray-600">your.email@example.com</p>
+                        <h3 class="font-semibold text-blue-100">Email</h3>
+                        <p class="text-white">your.email@example.com</p>
                     </div>
                 </div>
+            </div>
+            <div class="bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-xl hover:bg-opacity-20 transition transform hover:scale-105 duration-300">
                 <div class="flex items-center space-x-4">
-                    <div class="bg-primary-blue text-white p-3 rounded-full">
+                    <div class="bg-white bg-opacity-20 text-white p-3 rounded-full">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                         </svg>
                     </div>
                     <div>
-                        <h3 class="font-semibold text-gray-900">Phone</h3>
-                        <p class="text-gray-600">+1 (555) 123-4567</p>
+                        <h3 class="font-semibold text-blue-100">Phone</h3>
+                        <p class="text-white">+1 (555) 123-4567</p>
                     </div>
                 </div>
+            </div>
+            <div class="bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-xl hover:bg-opacity-20 transition transform hover:scale-105 duration-300">
                 <div class="flex items-center space-x-4">
-                    <div class="bg-primary-blue text-white p-3 rounded-full">
+                    <div class="bg-white bg-opacity-20 text-white p-3 rounded-full">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                         </svg>
                     </div>
                     <div>
-                        <h3 class="font-semibold text-gray-900">Location</h3>
-                        <p class="text-gray-600">Your City, Your Country</p>
+                        <h3 class="font-semibold text-blue-100">Location</h3>
+                        <p class="text-white">Your City, Your Country</p>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     </div>

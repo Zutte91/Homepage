@@ -3,54 +3,111 @@
 {% block title %}About Me - IT Consulting & Services{% endblock %}
 
 {% block content %}
-<section class="py-16 bg-white">
+<section class="relative py-20 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80'); background-attachment: fixed;">
+    <div class="absolute inset-0 bg-gradient-to-r from-primary-blue to-light-blue opacity-85"></div>
+    <div class="relative z-10 container mx-auto px-4">
+        <h1 class="text-6xl font-bold mb-2 text-white text-center">About Me</h1>
+        <div class="w-20 h-1 bg-white mx-auto rounded-full"></div>
+    </div>
+</section>
+
+<section class="py-20 bg-white">
     <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-5xl font-bold mb-8 text-primary-blue text-center">About Me</h1>
-            
-            <div class="bg-gray-50 rounded-lg p-8 mb-8 shadow-lg">
-                <div class="flex flex-col md:flex-row items-center mb-6">
-                    <div class="w-48 h-48 bg-primary-blue rounded-full flex items-center justify-center text-white text-6xl font-bold mb-4 md:mb-0 md:mr-8">
-                        <span>IT</span>
-                    </div>
-                    <div class="flex-1">
-                        <h2 class="text-3xl font-bold mb-4 text-primary-blue">Your Name</h2>
-                        <p class="text-lg text-gray-700 mb-4">
-                            IT Professional & Consultant
+        <div class="max-w-5xl mx-auto">
+            <div class="bg-gradient-to-r from-primary-blue to-light-blue rounded-2xl p-12 text-white mb-12 shadow-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                    <div class="md:col-span-2">
+                        <h2 class="text-4xl font-bold mb-6">Your Name</h2>
+                        <p class="text-xl text-blue-100 mb-4">IT Professional & Consultant</p>
+                        <p class="text-blue-50 leading-relaxed text-lg">
+                            Passionate about solving complex IT challenges and driving digital transformation 
+                            for businesses of all sizes. With years of experience, I bring innovation and expertise 
+                            to every project.
                         </p>
                     </div>
-                </div>
-                
-                <div class="prose max-w-none">
-                    <h3 class="text-2xl font-bold mb-4 text-primary-blue">Professional Background</h3>
-                    <p class="text-gray-700 mb-4 leading-relaxed">
-                        [Add your professional background and experience here. Describe your journey in IT, 
-                        your expertise, and what drives you in this field.]
-                    </p>
-                    
-                    <h3 class="text-2xl font-bold mb-4 text-primary-blue mt-8">Skills & Expertise</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                        <div class="bg-white p-4 rounded-lg border-l-4 border-primary-blue">
-                            <h4 class="font-semibold text-gray-900 mb-2">Technical Skills</h4>
-                            <p class="text-gray-600">[List your technical skills]</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-lg border-l-4 border-primary-blue">
-                            <h4 class="font-semibold text-gray-900 mb-2">Certifications</h4>
-                            <p class="text-gray-600">[List your certifications]</p>
+                    <div class="flex justify-center">
+                        <div class="w-48 h-48 bg-white bg-opacity-10 rounded-2xl backdrop-blur-lg flex items-center justify-center text-white text-7xl font-bold border-2 border-white border-opacity-20">
+                            <span>IT</span>
                         </div>
                     </div>
-                    
-                    <h3 class="text-2xl font-bold mb-4 text-primary-blue mt-8">My Approach</h3>
-                    <p class="text-gray-700 mb-4 leading-relaxed">
-                        [Describe your approach to IT consulting and how you work with clients. 
-                        What makes your services unique?]
-                    </p>
                 </div>
             </div>
             
-            <div class="text-center">
-                <a href="/" class="bg-primary-blue text-white px-8 py-3 rounded-lg font-semibold hover:bg-dark-blue transition inline-block mr-4">Back to Home</a>
-                <a href="/projects" class="bg-light-blue text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-blue transition inline-block">View Projects</a>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
+                <div class="bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-8 shadow-lg border-t-4 border-primary-blue">
+                    <h3 class="text-2xl font-bold mb-6 text-primary-blue">Professional Background</h3>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        [Add your professional background and experience here. Describe your journey in IT, 
+                        your expertise, and what drives you in this field.]
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        With a focus on innovation and customer satisfaction, I've successfully delivered 
+                        numerous projects across various industries and technologies.
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-primary-blue to-light-blue rounded-xl p-8 shadow-lg text-white">
+                    <h3 class="text-2xl font-bold mb-6">My Approach</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Client-focused solutions tailored to your needs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Continuous learning and innovation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span>Reliable and transparent communication</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-xl p-8 shadow-lg border-l-4 border-primary-blue mb-12">
+                <h3 class="text-2xl font-bold mb-6 text-primary-blue">Skills & Expertise</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg">
+                        <h4 class="font-bold text-primary-blue mb-3 text-lg">Technical Skills</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>✓ Infrastructure Management</li>
+                            <li>✓ Cloud Solutions</li>
+                            <li>✓ Network Architecture</li>
+                            <li>✓ Security & Compliance</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-100 to-blue-50 p-6 rounded-lg">
+                        <h4 class="font-bold text-primary-blue mb-3 text-lg">Certifications</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>✓ [Certification 1]</li>
+                            <li>✓ [Certification 2]</li>
+                            <li>✓ [Certification 3]</li>
+                            <li>✓ [Certification 4]</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg">
+                        <h4 class="font-bold text-primary-blue mb-3 text-lg">Soft Skills</h4>
+                        <ul class="space-y-2 text-gray-700">
+                            <li>✓ Project Management</li>
+                            <li>✓ Team Leadership</li>
+                            <li>✓ Problem Solving</li>
+                            <li>✓ Client Relations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex gap-4 justify-center flex-wrap">
+                <a href="/" class="bg-primary-blue text-white px-10 py-4 rounded-lg font-semibold hover:bg-dark-blue transition inline-block transform hover:scale-105 duration-300">Back to Home</a>
+                <a href="/projects" class="bg-gradient-to-r from-primary-blue to-light-blue text-white px-10 py-4 rounded-lg font-semibold hover:shadow-lg transition inline-block transform hover:scale-105 duration-300">View Projects</a>
+                <a href="/services" class="border-2 border-primary-blue text-primary-blue px-10 py-4 rounded-lg font-semibold hover:bg-primary-blue hover:text-white transition inline-block transform hover:scale-105 duration-300">Our Services</a>
             </div>
         </div>
     </div>

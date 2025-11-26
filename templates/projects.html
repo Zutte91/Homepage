@@ -3,34 +3,41 @@
 {% block title %}Projects Hub - IT Consulting & Services{% endblock %}
 
 {% block content %}
-<section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <h1 class="text-5xl font-bold mb-4 text-primary-blue text-center">Projects Hub</h1>
-        <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+<section class="relative py-20 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80'); background-attachment: fixed;">
+    <div class="absolute inset-0 bg-gradient-to-r from-primary-blue to-light-blue opacity-85"></div>
+    <div class="relative z-10 container mx-auto px-4 text-center">
+        <h1 class="text-6xl font-bold mb-4 text-white">Projects Hub</h1>
+        <p class="text-xl text-blue-100 max-w-2xl mx-auto">
             Stay updated with my latest projects and ongoing work in IT consulting, development, and more.
         </p>
+        <div class="w-20 h-1 bg-white mx-auto rounded-full mt-6"></div>
+    </div>
+</section>
+
+<section class="py-24 bg-gradient-to-b from-white to-gray-50">
         
-        <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div id="projects-container" class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Project cards will be dynamically added here -->
-            <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-primary-blue">
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary-blue group">
                 <div class="flex items-center justify-between mb-4">
-                    <span class="bg-primary-blue text-white px-3 py-1 rounded-full text-sm font-semibold">Active</span>
-                    <span class="text-gray-500 text-sm">2024</span>
+                    <span class="bg-gradient-to-r from-primary-blue to-light-blue text-white px-4 py-1 rounded-full text-sm font-semibold group-hover:shadow-lg transition">Active</span>
+                    <span class="text-gray-400 text-sm font-semibold">2024</span>
                 </div>
-                <h3 class="text-2xl font-bold mb-3 text-primary-blue">Sample Project</h3>
-                <p class="text-gray-700 mb-4">
+                <h3 class="text-2xl font-bold mb-4 text-primary-blue">Sample Project</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">
                     This is a placeholder project. You can add your own projects here by editing the projects data.
                 </p>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="bg-blue-100 text-primary-blue px-2 py-1 rounded text-sm">IT Consulting</span>
-                    <span class="bg-blue-100 text-primary-blue px-2 py-1 rounded text-sm">Network</span>
+                <div class="flex flex-wrap gap-2">
+                    <span class="bg-blue-100 text-primary-blue px-3 py-1 rounded-full text-sm font-semibold hover:bg-primary-blue hover:text-white transition">IT Consulting</span>
+                    <span class="bg-blue-100 text-primary-blue px-3 py-1 rounded-full text-sm font-semibold hover:bg-primary-blue hover:text-white transition">Network</span>
                 </div>
             </div>
         </div>
         
         <div class="mt-12 text-center">
-            <button onclick="addProject()" class="bg-primary-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-dark-blue transition">
-                Add New Project
+            <button onclick="addProject()" class="bg-gradient-to-r from-primary-blue to-light-blue text-white px-10 py-4 rounded-lg font-semibold hover:shadow-xl transition transform hover:scale-105 duration-300 inline-flex items-center space-x-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+                <span>Add New Project</span>
             </button>
         </div>
     </div>
@@ -52,15 +59,15 @@
     function renderProjects() {
         const container = document.getElementById('projects-container');
         container.innerHTML = projects.map(project => `
-            <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-primary-blue hover:shadow-xl transition">
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary-blue group">
                 <div class="flex items-center justify-between mb-4">
-                    <span class="bg-primary-blue text-white px-3 py-1 rounded-full text-sm font-semibold">${project.status}</span>
-                    <span class="text-gray-500 text-sm">${project.date}</span>
+                    <span class="bg-gradient-to-r from-primary-blue to-light-blue text-white px-4 py-1 rounded-full text-sm font-semibold group-hover:shadow-lg transition">${project.status}</span>
+                    <span class="text-gray-400 text-sm font-semibold">${project.date}</span>
                 </div>
-                <h3 class="text-2xl font-bold mb-3 text-primary-blue">${project.title}</h3>
-                <p class="text-gray-700 mb-4">${project.description}</p>
+                <h3 class="text-2xl font-bold mb-4 text-primary-blue">${project.title}</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">${project.description}</p>
                 <div class="flex flex-wrap gap-2">
-                    ${project.tags.map(tag => `<span class="bg-blue-100 text-primary-blue px-2 py-1 rounded text-sm">${tag}</span>`).join('')}
+                    ${project.tags.map(tag => `<span class="bg-blue-100 text-primary-blue px-3 py-1 rounded-full text-sm font-semibold hover:bg-primary-blue hover:text-white transition">${tag}</span>`).join('')}
                 </div>
             </div>
         `).join('');
