@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
-{% block title %}Projects Hub - IT Consulting & Services{% endblock %}
+{% block title %}Projekt-Hub - IT Beratung & Leistungen{% endblock %}
 
 {% block content %}
 <section class="relative py-20 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80'); background-attachment: fixed;">
     <div class="absolute inset-0 bg-gradient-to-r from-primary-blue to-light-blue opacity-85"></div>
     <div class="relative z-10 container mx-auto px-4 text-center">
-        <h1 class="text-6xl font-bold mb-4 text-white">Projects Hub</h1>
+        <h1 class="text-6xl font-bold mb-4 text-white">Projekt-Hub</h1>
         <p class="text-xl text-blue-100 max-w-2xl mx-auto">
-            Stay updated with my latest projects and ongoing work in IT consulting, development, and more.
+            Bleiben Sie aktuell mit meinen neuesten Projekten und laufenden Arbeiten in der IT-Beratung, Entwicklung und vielem mehr.
         </p>
         <div class="w-20 h-1 bg-white mx-auto rounded-full mt-6"></div>
     </div>
@@ -20,16 +20,16 @@
             <!-- Project cards will be dynamically added here -->
             <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary-blue group">
                 <div class="flex items-center justify-between mb-4">
-                    <span class="bg-gradient-to-r from-primary-blue to-light-blue text-white px-4 py-1 rounded-full text-sm font-semibold group-hover:shadow-lg transition">Active</span>
+                    <span class="bg-gradient-to-r from-primary-blue to-light-blue text-white px-4 py-1 rounded-full text-sm font-semibold group-hover:shadow-lg transition">Aktiv</span>
                     <span class="text-gray-400 text-sm font-semibold">2024</span>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-primary-blue">Sample Project</h3>
+                <h3 class="text-2xl font-bold mb-4 text-primary-blue">Beispielprojekt</h3>
                 <p class="text-gray-700 mb-6 leading-relaxed">
-                    This is a placeholder project. You can add your own projects here by editing the projects data.
+                    Dies ist ein Platzhalter-Projekt. Sie können Ihre eigenen Projekte hier hinzufügen, indem Sie die Projektdaten bearbeiten.
                 </p>
                 <div class="flex flex-wrap gap-2">
-                    <span class="bg-blue-100 text-primary-blue px-3 py-1 rounded-full text-sm font-semibold hover:bg-primary-blue hover:text-white transition">IT Consulting</span>
-                    <span class="bg-blue-100 text-primary-blue px-3 py-1 rounded-full text-sm font-semibold hover:bg-primary-blue hover:text-white transition">Network</span>
+                    <span class="bg-blue-100 text-primary-blue px-3 py-1 rounded-full text-sm font-semibold hover:bg-primary-blue hover:text-white transition">IT Beratung</span>
+                    <span class="bg-blue-100 text-primary-blue px-3 py-1 rounded-full text-sm font-semibold hover:bg-primary-blue hover:text-white transition">Netzwerk</span>
                 </div>
             </div>
         </div>
@@ -37,7 +37,7 @@
         <div class="mt-12 text-center">
             <button onclick="addProject()" class="bg-gradient-to-r from-primary-blue to-light-blue text-white px-10 py-4 rounded-lg font-semibold hover:shadow-xl transition transform hover:scale-105 duration-300 inline-flex items-center space-x-2">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
-                <span>Add New Project</span>
+                <span>Neues Projekt hinzufügen</span>
             </button>
         </div>
     </div>
@@ -48,11 +48,11 @@
     let projects = [
         {
             id: 1,
-            title: "Sample Project",
-            description: "This is a placeholder project. You can add your own projects here by editing the projects data.",
-            status: "Active",
+            title: "Beispielprojekt",
+            description: "Dies ist ein Platzhalter-Projekt. Sie können hier Ihre eigenen Projekte hinzufügen, indem Sie die Projektdaten bearbeiten.",
+            status: "Aktiv",
             date: "2024",
-            tags: ["IT Consulting", "Network"]
+            tags: ["IT Beratung", "Netzwerk"]
         }
     ];
 
@@ -74,21 +74,21 @@
     }
 
     function addProject() {
-        const title = prompt('Project Title:');
+        const title = prompt('Projekttitel:');
         if (!title) return;
         
-        const description = prompt('Project Description:');
-        const status = prompt('Status (Active/Completed/Planning):') || 'Active';
-        const date = prompt('Date:') || new Date().getFullYear().toString();
-        const tags = prompt('Tags (comma-separated):').split(',').map(t => t.trim());
+        const description = prompt('Projektbeschreibung:');
+        const status = prompt('Status (Aktiv/Abgeschlossen/Planung):') || 'Aktiv';
+        const date = prompt('Datum:') || new Date().getFullYear().toString();
+        const tags = prompt('Tags (kommagetrennt):').split(',').map(t => t.trim());
         
         projects.push({
             id: projects.length + 1,
             title,
-            description: description || 'No description provided.',
+            description: description || 'Keine Beschreibung bereitgestellt.',
             status,
             date,
-            tags: tags.length > 0 ? tags : ['General']
+            tags: tags.length > 0 ? tags : ['Allgemein']
         });
         
         renderProjects();
