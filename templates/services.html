@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Services - IT Consulting & Services{% endblock %}
+
+{% block content %}
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <h1 class="text-5xl font-bold mb-4 text-primary-blue text-center">Our Services</h1>
+        <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+            Comprehensive IT solutions tailored to your business needs. Explore our range of services below.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <a href="/services/it-consulting" class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition border-l-4 border-primary-blue">
+                <h3 class="text-2xl font-bold mb-4 text-primary-blue">IT Consulting</h3>
+                <p class="text-gray-700 mb-4">Expert guidance to optimize your IT infrastructure and strategy.</p>
+                <span class="text-light-blue hover:text-primary-blue font-semibold">Learn more →</span>
+            </a>
+            
+            <a href="/services/training" class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition border-l-4 border-primary-blue">
+                <h3 class="text-2xl font-bold mb-4 text-primary-blue">Training</h3>
+                <p class="text-gray-700 mb-4">Comprehensive IT training programs tailored to your team's needs.</p>
+                <span class="text-light-blue hover:text-primary-blue font-semibold">Learn more →</span>
+            </a>
+            
+            <a href="/services/trading" class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition border-l-4 border-primary-blue">
+                <h3 class="text-2xl font-bold mb-4 text-primary-blue">Trading</h3>
+                <p class="text-gray-700 mb-4">IT solutions and support for trading operations and systems.</p>
+                <span class="text-light-blue hover:text-primary-blue font-semibold">Learn more →</span>
+            </a>
+            
+            <a href="/services/network" class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition border-l-4 border-primary-blue">
+                <h3 class="text-2xl font-bold mb-4 text-primary-blue">Network</h3>
+                <p class="text-gray-700 mb-4">Design, implementation, and management of network infrastructure.</p>
+                <span class="text-light-blue hover:text-primary-blue font-semibold">Learn more →</span>
+            </a>
+            
+            <a href="/services/homelab" class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition border-l-4 border-primary-blue">
+                <h3 class="text-2xl font-bold mb-4 text-primary-blue">Homelab</h3>
+                <p class="text-gray-700 mb-4">Custom homelab solutions and consulting for enthusiasts and professionals.</p>
+                <span class="text-light-blue hover:text-primary-blue font-semibold">Learn more →</span>
+            </a>
+            
+            <a href="/services/software-development" class="bg-gray-50 p-6 rounded-lg shadow-lg hover:shadow-xl transition border-l-4 border-primary-blue">
+                <h3 class="text-2xl font-bold mb-4 text-primary-blue">Software Development</h3>
+                <p class="text-gray-700 mb-4">Custom software solutions built to your specifications.</p>
+                <span class="text-light-blue hover:text-primary-blue font-semibold">Learn more →</span>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+

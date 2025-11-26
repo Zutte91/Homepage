@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Homelab - IT Consulting & Services{% endblock %}
+
+{% block content %}
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl font-bold mb-4 text-primary-blue">Homelab</h1>
+            <p class="text-xl text-gray-600 mb-8">Custom homelab solutions and consulting for enthusiasts and professionals</p>
+            
+            <div class="bg-gray-50 rounded-lg p-8 mb-8 shadow-lg">
+                <h2 class="text-3xl font-bold mb-6 text-primary-blue">Overview</h2>
+                <p class="text-gray-700 mb-6 leading-relaxed">
+                    Whether you're a hobbyist or professional looking to build or optimize your homelab, 
+                    we provide expert guidance and solutions. From hardware selection to virtualization 
+                    setup, we help you create the perfect lab environment.
+                </p>
+                
+                <h2 class="text-3xl font-bold mb-6 text-primary-blue mt-8">Services Offered</h2>
+                <ul class="space-y-4 mb-6">
+                    <li class="flex items-start">
+                        <span class="text-primary-blue mr-3">✓</span>
+                        <span class="text-gray-700">Homelab design and planning</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-primary-blue mr-3">✓</span>
+                        <span class="text-gray-700">Hardware recommendations and sourcing</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-primary-blue mr-3">✓</span>
+                        <span class="text-gray-700">Virtualization platform setup (VMware, Proxmox, etc.)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-primary-blue mr-3">✓</span>
+                        <span class="text-gray-700">Container orchestration (Docker, Kubernetes)</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-primary-blue mr-3">✓</span>
+                        <span class="text-gray-700">Network configuration and segmentation</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-primary-blue mr-3">✓</span>
+                        <span class="text-gray-700">Storage solutions and backup strategies</span>
+                    </li>
+                </ul>
+                
+                <div class="mt-8">
+                    <a href="/" class="bg-primary-blue text-white px-6 py-3 rounded-lg font-semibold hover:bg-dark-blue transition inline-block">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+

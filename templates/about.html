@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}About Me - IT Consulting & Services{% endblock %}
+
+{% block content %}
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-5xl font-bold mb-8 text-primary-blue text-center">About Me</h1>
+            
+            <div class="bg-gray-50 rounded-lg p-8 mb-8 shadow-lg">
+                <div class="flex flex-col md:flex-row items-center mb-6">
+                    <div class="w-48 h-48 bg-primary-blue rounded-full flex items-center justify-center text-white text-6xl font-bold mb-4 md:mb-0 md:mr-8">
+                        <span>IT</span>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="text-3xl font-bold mb-4 text-primary-blue">Your Name</h2>
+                        <p class="text-lg text-gray-700 mb-4">
+                            IT Professional & Consultant
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="prose max-w-none">
+                    <h3 class="text-2xl font-bold mb-4 text-primary-blue">Professional Background</h3>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        [Add your professional background and experience here. Describe your journey in IT, 
+                        your expertise, and what drives you in this field.]
+                    </p>
+                    
+                    <h3 class="text-2xl font-bold mb-4 text-primary-blue mt-8">Skills & Expertise</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-primary-blue">
+                            <h4 class="font-semibold text-gray-900 mb-2">Technical Skills</h4>
+                            <p class="text-gray-600">[List your technical skills]</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-primary-blue">
+                            <h4 class="font-semibold text-gray-900 mb-2">Certifications</h4>
+                            <p class="text-gray-600">[List your certifications]</p>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold mb-4 text-primary-blue mt-8">My Approach</h3>
+                    <p class="text-gray-700 mb-4 leading-relaxed">
+                        [Describe your approach to IT consulting and how you work with clients. 
+                        What makes your services unique?]
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="/" class="bg-primary-blue text-white px-8 py-3 rounded-lg font-semibold hover:bg-dark-blue transition inline-block mr-4">Back to Home</a>
+                <a href="/projects" class="bg-light-blue text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-blue transition inline-block">View Projects</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
