@@ -1,18 +1,18 @@
 {% extends "base.html" %}
 
-{% block title %}Startseite - IT Beratung & Leistungen{% endblock %}
+{% block title %}Startseite - IT Service für Privatpersonen{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->
 <section class="relative min-h-screen flex items-center overflow-hidden">
     <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=80');"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-primary-blue to-light-blue opacity-80"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-80"></div>
     <div class="relative z-10 container mx-auto px-4 text-center text-white">
-        <h1 class="text-6xl md:text-7xl font-bold mb-6 leading-tight">Professionelle IT-Leistungen</h1>
-        <p class="text-2xl md:text-3xl mb-10 text-blue-100">Innovative Lösungen für digitale Herausforderungen</p>
+        <h1 class="text-6xl md:text-7xl font-bold mb-6 leading-tight">IT-Service für Privatpersonen</h1>
+        <p class="text-2xl md:text-3xl mb-10 text-blue-100">Praktische, leicht verständliche und sichere Lösungen für Ihr Zuhause</p>
         <div class="space-x-4">
-            <a href="/about" class="bg-white text-primary-blue px-10 py-4 rounded-lg font-semibold hover:bg-blue-50 transition inline-block transform hover:scale-105 duration-300">Mehr erfahren</a>
-            <a href="/services" class="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-blue transition inline-block transform hover:scale-105 duration-300">Unsere Leistungen</a>
+            <a href="/about" class="bg-white text-primary px-10 py-4 rounded-lg font-semibold hover:bg-blue-50 transition inline-block transform hover:scale-105 duration-300">Mehr erfahren</a>
+            <a href="/services" class="border-2 border-white text-white px-10 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition inline-block transform hover:scale-105 duration-300">Unsere Leistungen</a>
         </div>
     </div>
 </section>
@@ -21,81 +21,81 @@
 <section class="py-24 bg-gradient-to-b from-white to-gray-100">
     <div class="container mx-auto px-4">
         <div class="text-center mb-16">
-            <h2 class="text-5xl font-bold text-primary-blue mb-4">Unsere Leistungen</h2>
-            <div class="w-20 h-1 bg-light-blue mx-auto rounded-full"></div>
+            <h2 class="text-5xl font-bold text-primary mb-4">Unsere Leistungen für Privathaushalte</h2>
+            <div class="w-20 h-1 bg-accent mx-auto rounded-full"></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary-blue group cursor-pointer">
-                <div class="w-16 h-16 bg-primary-blue rounded-lg flex items-center justify-center mb-6 group-hover:bg-light-blue transition">
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary group cursor-pointer">
+                <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent transition">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                     </svg>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-primary-blue">IT Beratung</h3>
-                <p class="text-gray-700 mb-6 leading-relaxed">Fachmännische Beratung zur Optimierung Ihrer IT-Infrastruktur und Strategie.</p>
-                <a href="/services/it-consulting" class="text-light-blue hover:text-primary-blue font-semibold inline-flex items-center group/link">Mehr erfahren <span class="ml-2 group-hover/link:translate-x-2 transition">→</span></a>
+                <h3 class="text-2xl font-bold mb-4 text-primary">IT Beratung</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Persönliche Beratung rund um Heimnetz, Datensicherung und sichere Konfigurationen für Privatkunden.</p>
+                <a href="/services/it-consulting" class="text-accent hover:text-primary font-semibold inline-flex items-center group/link">Mehr erfahren <span class="ml-2 group-hover/link:translate-x-2 transition">→</span></a>
             </div>
             
-            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary-blue group cursor-pointer">
-                <div class="w-16 h-16 bg-primary-blue rounded-lg flex items-center justify-center mb-6 group-hover:bg-light-blue transition">
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary group cursor-pointer">
+                <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent transition">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C6.5 6.253 2 10.998 2 17s4.5 10.747 10 10.747c5.5 0 10-4.998 10-10.747S17.5 6.253 12 6.253z"></path>
                     </svg>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-primary-blue">Schulungen</h3>
-                <p class="text-gray-700 mb-6 leading-relaxed">Umfassende IT-Schulungsprogramme, die auf die Anforderungen Ihres Teams zugeschnitten sind.</p>
-                <a href="/services/training" class="text-light-blue hover:text-primary-blue font-semibold inline-flex items-center group/link">Mehr erfahren <span class="ml-2 group-hover/link:translate-x-2 transition">→</span></a>
+                <h3 class="text-2xl font-bold mb-4 text-primary">Schulungen</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Kurze, praxisnahe Einweisungen (z. B. für Senioren oder technikinteressierte Einsteiger), damit Sie Ihre Geräte sicher bedienen.</p>
+                <a href="/services/training" class="text-accent hover:text-primary font-semibold inline-flex items-center group/link">Mehr erfahren <span class="ml-2 group-hover/link:translate-x-2 transition">→</span></a>
             </div>
             
-            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary-blue group cursor-pointer">
-                <div class="w-16 h-16 bg-primary-blue rounded-lg flex items-center justify-center mb-6 group-hover:bg-light-blue transition">
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary group cursor-pointer">
+                <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent transition">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-primary-blue">Hardware</h3>
-                <p class="text-gray-700 mb-6 leading-relaxed">IT-Lösungen und Unterstützung für Handelsoperationen und Systeme.</p>
-                <a href="/services/trading" class="text-light-blue hover:text-primary-blue font-semibold inline-flex items-center group/link">Mehr erfahren <span class="ml-2 group-hover/link:translate-x-2 transition">→</span></a>
+                <h3 class="text-2xl font-bold mb-4 text-primary">Hardware</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Beratung, Beschaffung und Einrichtung von Heimnetz-Hardware wie Routern, NAS und Mesh-Systemen.</p>
+                <a href="/services/trading" class="text-accent hover:text-primary font-semibold inline-flex items-center group/link">Mehr erfahren <span class="ml-2 group-hover/link:translate-x-2 transition">→</span></a>
             </div>
             
-            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary-blue group cursor-pointer">
-                <div class="w-16 h-16 bg-primary-blue rounded-lg flex items-center justify-center mb-6 group-hover:bg-light-blue transition">
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary group cursor-pointer">
+                <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent transition">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.933 13.074a8 8 0 0013.793-3.652M9.933 13.074l-2.606 8.405a8.001 8.001 0 0011.532-1.05M9.933 13.074l6.903-6.903M12 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                     </svg>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-primary-blue">Netzwerk</h3>
-                <p class="text-gray-700 mb-6 leading-relaxed">Planung, Implementierung und Verwaltung von Netzwerkinfrastruktur.</p>
-                <a href="/services/network" class="text-light-blue hover:text-primary-blue font-semibold inline-flex items-center group/link">Mehr erfahren <span class="ml-2 group-hover/link:translate-x-2 transition">→</span></a>
+                <h3 class="text-2xl font-bold mb-4 text-primary">Netzwerk</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Optimierung Ihres Heimnetzes — von FRITZ!Box-Einrichtungen bis zu UniFi-Systemen für besseres WLAN.</p>
+                <a href="/services/network" class="text-accent hover:text-primary font-semibold inline-flex items-center group/link">Mehr erfahren <span class="ml-2 group-hover/link:translate-x-2 transition">→</span></a>
             </div>
             
-            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary-blue group cursor-pointer">
-                <div class="w-16 h-16 bg-primary-blue rounded-lg flex items-center justify-center mb-6 group-hover:bg-light-blue transition">
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary group cursor-pointer">
+                <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent transition">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
                     </svg>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-primary-blue">Homelab</h3>
-                <p class="text-gray-700 mb-6 leading-relaxed">Benutzerdefinierte Homelab-Lösungen und Beratung für Enthusiasten und Profis.</p>
-                <a href="/services/homelab" class="text-light-blue hover:text-primary-blue font-semibold inline-flex items-center group/link">Mehr erfahren <span class="ml-2 group-hover/link:translate-x-2 transition">→</span></a>
+                <h3 class="text-2xl font-bold mb-4 text-primary">Smart Home</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Einrichtung und Integration von Smart-Home-Komponenten wie Home Assistant, Philips Hue und Shelly.</p>
+                <a href="/services/homelab" class="text-accent hover:text-primary font-semibold inline-flex items-center group/link">Mehr erfahren <span class="ml-2 group-hover/link:translate-x-2 transition">→</span></a>
             </div>
             
-            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary-blue group cursor-pointer">
-                <div class="w-16 h-16 bg-primary-blue rounded-lg flex items-center justify-center mb-6 group-hover:bg-light-blue transition">
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary group cursor-pointer">
+                <div class="w-16 h-16 bg-primary rounded-lg flex items-center justify-center mb-6 group-hover:bg-accent transition">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4m0 0l-4 4m4-4H3"></path>
                     </svg>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-primary-blue">Software-Entwicklung</h3>
-                <p class="text-gray-700 mb-6 leading-relaxed">Benutzerdefinierte Softwarelösungen gemäß Ihren Anforderungen.</p>
-                <a href="/services/software-development" class="text-light-blue hover:text-primary-blue font-semibold inline-flex items-center group/link">Mehr erfahren <span class="ml-2 group-hover/link:translate-x-2 transition">→</span></a>
+                <h3 class="text-2xl font-bold mb-4 text-primary">Software-Entwicklung</h3>
+                <p class="text-gray-700 mb-6 leading-relaxed">Kleine Automatisierungen und individuelle Lösungen, die Ihren Alltag zu Hause erleichtern.</p>
+                <a href="/services/software-development" class="text-accent hover:text-primary font-semibold inline-flex items-center group/link">Mehr erfahren <span class="ml-2 group-hover/link:translate-x-2 transition">→</span></a>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Contact Section -->
-<section class="py-24 bg-gradient-to-r from-primary-blue to-light-blue text-white">
+<section class="py-24 bg-gradient-to-r from-primary to-accent text-white">
     <div class="container mx-auto px-4">
         <h2 class="text-5xl font-bold text-center mb-4">Kontaktieren Sie uns</h2>
         <p class="text-center text-blue-100 mb-16 text-lg">Wir freuen uns, von Ihnen zu hören</p>

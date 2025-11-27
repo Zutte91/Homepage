@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
+import os
 
 app = Flask(__name__)
 
@@ -37,6 +38,12 @@ def network():
 @app.route('/services/homelab')
 def homelab():
     return render_template('services/homelab.html')
+
+
+@app.route('/media/<path:filename>')
+def media(filename):
+    media_dir = os.path.join(os.path.dirname(__file__), 'media')
+    return send_from_directory(media_dir, filename)
 
 @app.route('/services/software-development')
 def software_development():

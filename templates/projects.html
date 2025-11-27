@@ -4,7 +4,7 @@
 
 {% block content %}
 <section class="relative py-20 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&q=80'); background-attachment: fixed;">
-    <div class="absolute inset-0 bg-gradient-to-r from-primary-blue to-light-blue opacity-85"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-primary to-accent opacity-85"></div>
     <div class="relative z-10 container mx-auto px-4 text-center">
         <h1 class="text-6xl font-bold mb-4 text-white">Projekt-Hub</h1>
         <p class="text-xl text-blue-100 max-w-2xl mx-auto">
@@ -18,24 +18,24 @@
         
         <div id="projects-container" class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Project cards will be dynamically added here -->
-            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary-blue group">
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary group">
                 <div class="flex items-center justify-between mb-4">
-                    <span class="bg-gradient-to-r from-primary-blue to-light-blue text-white px-4 py-1 rounded-full text-sm font-semibold group-hover:shadow-lg transition">Aktiv</span>
+                    <span class="bg-gradient-to-r from-primary to-accent text-white px-4 py-1 rounded-full text-sm font-semibold group-hover:shadow-lg transition">Aktiv</span>
                     <span class="text-gray-400 text-sm font-semibold">2024</span>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-primary-blue">Beispielprojekt</h3>
+                <h3 class="text-2xl font-bold mb-4 text-primary">Beispielprojekt</h3>
                 <p class="text-gray-700 mb-6 leading-relaxed">
                     Dies ist ein Platzhalter-Projekt. Sie können Ihre eigenen Projekte hier hinzufügen, indem Sie die Projektdaten bearbeiten.
                 </p>
                 <div class="flex flex-wrap gap-2">
-                    <span class="bg-blue-100 text-primary-blue px-3 py-1 rounded-full text-sm font-semibold hover:bg-primary-blue hover:text-white transition">IT Beratung</span>
-                    <span class="bg-blue-100 text-primary-blue px-3 py-1 rounded-full text-sm font-semibold hover:bg-primary-blue hover:text-white transition">Netzwerk</span>
+                    <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition">IT Beratung</span>
+                    <span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition">Netzwerk</span>
                 </div>
             </div>
         </div>
         
         <div class="mt-12 text-center">
-            <button onclick="addProject()" class="bg-gradient-to-r from-primary-blue to-light-blue text-white px-10 py-4 rounded-lg font-semibold hover:shadow-xl transition transform hover:scale-105 duration-300 inline-flex items-center space-x-2">
+            <button onclick="addProject()" class="bg-gradient-to-r from-primary to-accent text-white px-10 py-4 rounded-lg font-semibold hover:shadow-xl transition transform hover:scale-105 duration-300 inline-flex items-center space-x-2">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
                 <span>Neues Projekt hinzufügen</span>
             </button>
@@ -59,15 +59,15 @@
     function renderProjects() {
         const container = document.getElementById('projects-container');
         container.innerHTML = projects.map(project => `
-            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary-blue group">
+            <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-2 duration-300 border-t-4 border-primary group">
                 <div class="flex items-center justify-between mb-4">
-                    <span class="bg-gradient-to-r from-primary-blue to-light-blue text-white px-4 py-1 rounded-full text-sm font-semibold group-hover:shadow-lg transition">${project.status}</span>
+                    <span class="bg-gradient-to-r from-primary to-accent text-white px-4 py-1 rounded-full text-sm font-semibold group-hover:shadow-lg transition">${project.status}</span>
                     <span class="text-gray-400 text-sm font-semibold">${project.date}</span>
                 </div>
-                <h3 class="text-2xl font-bold mb-4 text-primary-blue">${project.title}</h3>
+                <h3 class="text-2xl font-bold mb-4 text-primary">${project.title}</h3>
                 <p class="text-gray-700 mb-6 leading-relaxed">${project.description}</p>
                 <div class="flex flex-wrap gap-2">
-                    ${project.tags.map(tag => `<span class="bg-blue-100 text-primary-blue px-3 py-1 rounded-full text-sm font-semibold hover:bg-primary-blue hover:text-white transition">${tag}</span>`).join('')}
+                    ${project.tags.map(tag => `<span class="bg-blue-100 text-primary px-3 py-1 rounded-full text-sm font-semibold hover:bg-primary hover:text-white transition">${tag}</span>`).join('')}
                 </div>
             </div>
         `).join('');

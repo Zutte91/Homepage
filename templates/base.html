@@ -10,15 +10,21 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary-blue': '#1e40af',
-                        'light-blue': '#3b82f6',
-                        'dark-blue': '#1e3a8a',
+                        'primary': 'var(--color-primary)',
+                        'accent': 'var(--color-accent)',
+                        'dark': 'var(--color-dark)'
                     }
                 }
             }
         }
     </script>
     <style>
+        /* Farbvariablen: angepasst an das Logo (vom Nutzer bereitgestellt) */
+        :root {
+            --color-primary: #d9ecfa; /* sehr helles Blau (Primary) */
+            --color-accent:  #aecde1; /* Akzent-Blau (Accent) */
+            --color-dark:    #043651; /* dunkles Petrol/Nachtblau (Dark) */
+        }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         }
@@ -53,10 +59,13 @@
 </head>
 <body class="bg-white text-gray-900">
     <!-- Header Navigation -->
-    <header class="bg-primary-blue text-white shadow-lg sticky top-0 z-50 transition-all duration-300">
+    <header class="bg-primary text-white shadow-lg sticky top-0 z-50 transition-all duration-300">
         <nav class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
-                <a href="/" class="text-3xl font-bold hover:text-blue-200 transition transform hover:scale-110 duration-300">ez-IT</a>
+                <a href="/" class="flex items-center space-x-3 hover:opacity-90 transition">
+                    <img src="/media/EZit%20LOGO.jpg" alt="ez-IT Logo" class="h-10 object-contain">
+                    <span class="text-2xl font-bold text-white">ez-IT</span>
+                </a>
                 <ul class="flex space-x-8">
                     <li><a href="/" class="hover:text-blue-200 transition relative group">Startseite<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span></a></li>
                     <li><a href="/about" class="hover:text-blue-200 transition relative group">Über uns<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span></a></li>
@@ -64,12 +73,12 @@
                     <li class="relative group">
                         <a href="/services" class="hover:text-blue-200 transition">Leistungen<span class="absolute bottom-0 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span></a>
                         <ul class="absolute left-0 mt-2 w-56 bg-white text-gray-900 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-10 overflow-hidden">
-                            <li><a href="/services/it-consulting" class="block px-6 py-3 hover:bg-primary-blue hover:text-white transition">IT Beratung</a></li>
-                            <li><a href="/services/training" class="block px-6 py-3 hover:bg-primary-blue hover:text-white transition">Schulungen</a></li>
-                            <li><a href="/services/trading" class="block px-6 py-3 hover:bg-primary-blue hover:text-white transition">Hardware</a></li>
-                            <li><a href="/services/network" class="block px-6 py-3 hover:bg-primary-blue hover:text-white transition">Netzwerk</a></li>
-                            <li><a href="/services/homelab" class="block px-6 py-3 hover:bg-primary-blue hover:text-white transition">Homelab</a></li>
-                            <li><a href="/services/software-development" class="block px-6 py-3 hover:bg-primary-blue hover:text-white transition">Software-Entwicklung</a></li>
+                            <li><a href="/services/it-consulting" class="block px-6 py-3 hover:bg-primary hover:text-white transition">IT Beratung</a></li>
+                            <li><a href="/services/training" class="block px-6 py-3 hover:bg-primary hover:text-white transition">Schulungen</a></li>
+                            <li><a href="/services/trading" class="block px-6 py-3 hover:bg-primary hover:text-white transition">Hardware</a></li>
+                            <li><a href="/services/network" class="block px-6 py-3 hover:bg-primary hover:text-white transition">Netzwerk</a></li>
+                            <li><a href="/services/homelab" class="block px-6 py-3 hover:bg-primary hover:text-white transition">Smart Home</a></li>
+                            <li><a href="/services/software-development" class="block px-6 py-3 hover:bg-primary hover:text-white transition">Software-Entwicklung</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -83,7 +92,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-r from-primary-blue to-light-blue text-white mt-12 border-t-4 border-light-blue">
+    <footer class="bg-gradient-to-r from-primary to-accent text-white mt-12 border-t-4 border-accent">
         <div class="container mx-auto px-4 py-12">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                 <div>
@@ -106,7 +115,7 @@
                     <h3 class="text-xl font-bold mb-4">Weitere Leistungen</h3>
                     <ul class="space-y-2">
                         <li><a href="/services/network" class="hover:text-blue-200 transition">Netzwerk</a></li>
-                        <li><a href="/services/homelab" class="hover:text-blue-200 transition">Homelab</a></li>
+                        <li><a href="/services/homelab" class="hover:text-blue-200 transition">Smart Home</a></li>
                         <li><a href="/services/software-development" class="hover:text-blue-200 transition">Software</a></li>
                     </ul>
                 </div>
