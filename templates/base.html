@@ -21,8 +21,8 @@
     <style>
         /* Farbvariablen: angepasst an das Logo (vom Nutzer bereitgestellt) */
         :root {
-            --color-primary: #d9ecfa; /* sehr helles Blau (Primary) */
-            --color-accent:  #aecde1; /* Akzent-Blau (Accent) */
+            --color-primary: #8cc1e7; /* sehr helles Blau (Primary) */
+            --color-accent:  #75cce6; /* Akzent-Blau (Accent) */
             --color-dark:    #043651; /* dunkles Petrol/Nachtblau (Dark) */
         }
         body {
@@ -54,6 +54,25 @@
         }
         .slide-in-right {
             animation: slideInFromRight 0.6s ease-out;
+        }
+        /* Text-Schatten für nicht-schwarze Texte zur besseren Lesbarkeit */
+        .text-white {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .text-blue-100 {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .text-blue-200 {
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .text-primary {
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+        }
+        .text-accent {
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+        }
+        .text-dark {
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
         }
     </style>
 </head>
@@ -112,7 +131,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Weitere Leistungen</h3>
+                    <h3 class="text-xl font-bold mb-4"></h3>
                     <ul class="space-y-2">
                         <li><a href="/services/network" class="hover:text-blue-200 transition">Netzwerk</a></li>
                         <li><a href="/services/homelab" class="hover:text-blue-200 transition">Smart Home</a></li>
@@ -136,7 +155,12 @@
                 </div>
             </div>
             <div class="border-t border-white border-opacity-30 pt-8 text-center text-blue-100">
-                <p>&copy; 2024 IT Services. Alle Rechte vorbehalten.</p>
+                <div class="mb-4 space-x-6">
+                    <a href="/imprint" class="hover:text-white transition">Impressum</a>
+                    <span>|</span>
+                    <a href="/datenschutz" class="hover:text-white transition">Datenschutz</a>
+                </div>
+                <p>&copy; 2025 Erik Zutt. Alle Rechte vorbehalten.</p>
             </div>
         </div>
     </footer>

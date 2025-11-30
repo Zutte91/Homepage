@@ -49,6 +49,10 @@ def media(filename):
 def software_development():
     return render_template('services/software_development.html')
 
+@app.route('/imprint')
+def imprint():
+    return render_template('imprint.html')
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8000)
 
